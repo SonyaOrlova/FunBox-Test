@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Type" content="text/html">
+
+  <title>FunBox</title>
+  <link rel="stylesheet" href="style.css">
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+</head>
+
+<body>
+
+  <header class="page-header">
+    <div class="page-header__logo">
+      <img src="img/logo.png" width="47" height="87" alt="Логотип FunBox">
+    </div>
+    <p class="page-header__description">Квалификационное задание для разработчиков <span>Java Script</span></p>
+  </header>
+
+  <main class="page-main">
+    <form class="form">
+      <input class="form__input" type="text" placeholder="Введите адрес">
+      <button class="visually-hidden" type="submit">Go</button>
+      <div class="form__items-wrapper">
+      </div>
+    </form>
+    <div id="map" class="map"></div>
+  </main>
+
+  <footer class="page-footer">
+    <div class="page-footer__wrapper">
+      <div class="copyright">
+        <p class="copyright__text">made by <span>Orlova Sonya</span></p>
+      </div>
+      <div class="page-footer__contacts">
+        <a class="social__link social__link--mail" href="mailto:sonya5488@yandex.ru">
+          <img src="img/mail.png" width="35" height="35" alt="Почта Орловой С.">
+        </a>
+        <a class="social__link social__link--github" href="https://github.com/SonyaOrlova">
+          <img src="img/mark-github.png" width="35" height="35" alt="Логотип Github">
+        </a>
+        <a class="social__link social__link--hh" href="https://hh.ru/resume/993bbe44ff007270d20039ed1f736563726574">
+          <img src="img/mark-hh.png" width="35" height="35" alt="Логотип HeadHunter">
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+
+</body>
+</html>

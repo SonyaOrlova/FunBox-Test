@@ -1,0 +1,206 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.4em;
+
+  min-width: 320px;
+  margin: 0;
+  padding: 0;
+
+  color: #000000;
+  background-color: #ffffff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
+}
+
+.page-header {
+  display: flex;
+
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.05);
+
+  align-items: center;
+}
+
+.page-header__logo {
+  margin: 1% 5% 1% 3%;
+}
+
+.page-header__description {
+  font-size: 15px;
+  text-transform: uppercase;
+
+  margin-right: 3%;
+  margin-left: auto;
+}
+
+.page-header__description span {
+  font-weight: 700;
+
+  color: #cb4d2a;
+}
+
+.page-main {
+  display: flex;
+
+  margin: 3%;
+
+  flex-wrap: wrap;
+}
+
+.form {
+  display: flex;
+
+  width: 35%;
+  min-height: 500px;
+  margin-right: 2%;
+
+  border-bottom: 1px solid #cb4d2a;
+
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.form__input {
+  box-sizing: border-box;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 10px;
+  padding-left: 10px;
+
+  border: 1px solid #072f18;
+}
+
+.form__items-wrapper {
+  display: flex;
+
+  width: 100%;
+  margin-top: 10px;
+
+  flex-wrap: wrap;
+}
+
+.form__item {
+  display: flex;
+
+  width: 100%;
+
+  align-items: center;
+}
+
+.form__address {
+  font-size: 15px;
+
+  box-sizing: border-box;
+  width: 90%;
+  min-height: 40px;
+  margin: 0;
+  padding: 10px 5px;
+
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+}
+
+.form__delete-address {
+  font-size: 0;
+
+  position: relative;
+
+  width: 20px;
+  height: 20px;
+  margin-left: auto;
+  padding: 0;
+
+  border: 0;
+}
+
+.form__delete-address:before,
+.form__delete-address:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  width: 2px;
+  height: inherit;
+  margin: auto;
+
+  content: " ";
+
+  background-color: rgba(0,0,0,0.5);
+}
+.form__delete-address:before {
+  transform: rotate(45deg);
+}
+.form__delete-address:after {
+  transform: rotate(-45deg);
+}
+
+.map {
+  box-sizing: border-box;
+  width: 63%;
+  min-height: 500px;
+
+  border: 1px solid #638d07;
+}
+
+.page-footer {
+  border-top: 1px solid rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.05);
+}
+.page-footer__wrapper {
+  display: flex;
+
+  margin: 1% 3%;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+.copyright__text {
+  font-size: 12px;
+}
+
+.copyright__text span {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.page-footer__contacts {
+  display: flex;
+
+  justify-content: space-between;
+}
+
+.social__link {
+  margin-right: 10px;
+}
+
+.ghost {
+  opacity: 0.4;
+}
