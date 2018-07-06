@@ -102,18 +102,19 @@ const init = () => {
 
   // Обновляет зум при изменениях
   const renewZoom = () => {
-    if (myPoints.length > 0) {
+    if(myPoints.length > 0) {
       myMap.setBounds(myMap.geoObjects.getBounds(), {
-        checkZoomRange: true
+        checkZoomRange:true
       })
-      .then(() => {
-        if (myMap.getZoom() > 15) {
+      .then(() => { 
+        if(myMap.getZoom() > 15) {
           myMap.setZoom(15);
         }
-      });
+      })
+    } else {
+      // если точек нет снова центрует на Москву
+      myMap.setCenter([55.76, 37.64], 10);
     }
-    // если точек нет снова центрует на Москву
-    myMap.setCenter([55.76, 37.64], 10);
   };
 
   // Задает параметры линии
@@ -213,7 +214,7 @@ const init = () => {
         });
       });
       renewZoom();
-    });
+    })
   });
 };
 
