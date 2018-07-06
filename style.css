@@ -52,10 +52,11 @@ input[type="radio"].visually-hidden {
 
 .page-header__description {
   font-size: 15px;
-  text-transform: uppercase;
 
   margin-right: 3%;
   margin-left: auto;
+
+  text-transform: uppercase;
 }
 
 .page-header__description span {
@@ -135,6 +136,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
 
   border: 0;
+  background: none;
 }
 
 .form__delete-address:before,

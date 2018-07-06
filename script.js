@@ -8,7 +8,7 @@ const init = () => {
   const renderDOMPoint = (address, id) => {
     const template = `
     <p class="form__address">${address}</p>
-    <button class="form__delete-address">Удалить</button>
+    <button type="button" class="form__delete-address">Удалить</button>
     `;
     const wrapper = document.createElement(`div`);
     wrapper.className = `form__item`;
@@ -78,8 +78,12 @@ const init = () => {
     // Начинает сортировку
     parentElement.addEventListener(`dragstart`, (evt) => {
       dragItem = evt.target; // Запоминаем элемент который будет перемещать
-      parentElement.addEventListener(`dragover`, dragging);
-      parentElement.addEventListener(`dragend`, drop);
+
+      evt.dataTransfer.effectAllowed = 'move';
+      evt.dataTransfer.setData('text/html', `anything`); 
+
+      parentElement.addEventListener(`dragover`, dragging, false);
+      parentElement.addEventListener(`dragend`, drop, false);
       dragItem.classList.add(`ghost`);
     });
   };
