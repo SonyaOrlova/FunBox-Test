@@ -80,7 +80,7 @@ const init = () => {
       dragItem = evt.target; // Запоминаем элемент который будет перемещать
 
       evt.dataTransfer.effectAllowed = 'move';
-      evt.dataTransfer.setData('text/html', `anything`); 
+      evt.dataTransfer.setData('text/html', dragItem.innerHTML); 
 
       parentElement.addEventListener(`dragover`, dragging, false);
       parentElement.addEventListener(`dragend`, drop, false);
