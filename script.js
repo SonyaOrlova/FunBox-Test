@@ -1,5 +1,4 @@
 const init = () => {
-  // Создает коллекцию адресов
   let myPoints = [];
 
   // Отрисовывает точки в DOM
@@ -28,7 +27,7 @@ const init = () => {
   const sortItems = (parentElement) => {
     let dragItem;
     let nextItem;
-    // Указываем, что дочерние элементы аргумента перетаскиваемы
+
     parentElement.childNodes.forEach((child) => {
       child.draggable = true;
     });
@@ -77,10 +76,10 @@ const init = () => {
 
     // Начинает сортировку
     parentElement.addEventListener(`dragstart`, (evt) => {
-      dragItem = evt.target; // Запоминаем элемент который будет перемещать
+      dragItem = evt.target;
 
       evt.dataTransfer.effectAllowed = 'move';
-      evt.dataTransfer.setData('text/html', dragItem.innerHTML); 
+      evt.dataTransfer.setData("text/plain", "anything"); 
 
       parentElement.addEventListener(`dragover`, dragging, false);
       parentElement.addEventListener(`dragend`, drop, false);
@@ -146,11 +145,9 @@ const init = () => {
     const deleteBtn = addressElem.querySelector(`.form__delete-address`);
     deleteBtn.addEventListener(`click`, (evt) => {
       evt.preventDefault();
-      // Убирает DOM элемент с адресом
+
       addressElem.remove();
-      // Убирает метку
       myMap.geoObjects.remove(placemark);
-      // Убирает точку из коллекции и обновляем линию
       const pointIndex = myPoints.indexOf(myPoints.find((it) => it.coords === point.coords));
       myPoints.splice(pointIndex, 1);
       renewLine();
